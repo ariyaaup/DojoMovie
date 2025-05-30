@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/welcome_background"
+    android:paddingTop="60dp"
+    tools:context=".RegisterActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/dojo_movie"
+            android:layout_marginBottom="90dp"
+            />
+
+        <EditText
+            android:id="@+id/phoneNumET"
+            android:layout_width="300dp"
+            android:layout_height="37dp"
+            android:background="@drawable/rounded_button"
+            android:hint="Enter Phone Number"
+            android:textColorHint="#BFBFBF"
+            android:layout_marginBottom="20dp"
+            android:textSize="15dp"
+            android:paddingLeft="20dp"
+            android:inputType="number"
+            />
+
+        <EditText
+            android:id="@+id/passwordET"
+            android:layout_width="300dp"
+            android:layout_height="37dp"
+            android:background="@drawable/rounded_button"
+            android:hint="Enter Password"
+            android:textColorHint="#BFBFBF"
+            android:layout_marginBottom="20dp"
+            android:textSize="15dp"
+            android:paddingLeft="20dp"/>
+
+        <EditText
+            android:id="@+id/confirmPasswordET"
+            android:layout_width="300dp"
+            android:layout_height="37dp"
+            android:background="@drawable/rounded_button"
+            android:hint="Confirm Password"
+            android:textColorHint="#BFBFBF"
+            android:layout_marginBottom="20dp"
+            android:textSize="15dp"
+            android:paddingLeft="20dp"/>
+
+        <Button
+            android:id="@+id/signUpButton"
+            android:layout_width="280dp"
+            android:layout_height="45dp"
+            android:backgroundTint="#EEBA2C"
+            android:text="Sign Up"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            app:cornerRadius="10dp"
+            tools:ignore="HardcodedText"
+            android:layout_marginBottom="15dp"
+            />
+
+
+        <TextView
+            android:layout_marginTop="100dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Already Have An Account? Sign In Now !!"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+
+</RelativeLayout>

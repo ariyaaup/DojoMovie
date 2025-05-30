@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/welcome_background"
+    android:paddingTop="60dp"
+    tools:context=".OTPActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:paddingTop="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OTP CODE"
+            android:textColor="#EEBA2C"
+            android:textStyle="bold"
+            android:textSize="30dp" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/otp_logo"
+            android:contentDescription="Logo aplikasi"
+            android:scaleType="fitCenter"
+
+            />
+
+        <TextView
+            android:id="@+id/countdownText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Resend Code In : 60s"
+            android:textColor="#EEBA2C"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:textSize="16sp"
+            android:layout_gravity="center"
+            android:textStyle="bold"/>
+
+
+        <com.chaos.view.PinView
+            android:id="@+id/pinView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:contentDescription="Masukkan kode OTP sebanyak enam digit"
+            android:cursorVisible="true"
+            android:enabled="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:inputType="number"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:itemCount="6"
+            app:itemRadius="10dp"
+            app:itemSpacing="20dp"
+            app:lineColor="@color/white" />
+
+        <Button
+            android:id="@+id/OkButton"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:backgroundTint="#EEBA2C"
+            android:text="OK"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            app:cornerRadius="10dp"
+            tools:ignore="HardcodedText"
+            android:layout_marginBottom="15dp"
+            android:onClick="signInClicked"/>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

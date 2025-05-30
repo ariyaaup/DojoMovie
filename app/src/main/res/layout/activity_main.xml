@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/welcome_background"
+    android:paddingTop="60dp"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_marginTop="50dp"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/dojo_movie"
+            android:layout_marginBottom="80dp"
+            />
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/baseline_play_circle_24"
+            android:layout_marginBottom="100dp"/>
+
+
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="55dp"
+            android:backgroundTint="#EEBA2C"
+            android:text="Sign In"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            app:cornerRadius="10dp"
+            tools:ignore="HardcodedText"
+            android:layout_marginBottom="15dp"
+            android:onClick="signInClicked"/>
+
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="55dp"
+            android:backgroundTint="@color/white"
+            android:text="Sign Up"
+            android:textColor="#4B0082"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            app:cornerRadius="10dp"
+            tools:ignore="HardcodedText"
+            android:onClick="signUpClicked"/>
+
+
+    </LinearLayout>
+
+</RelativeLayout>
