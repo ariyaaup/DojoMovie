@@ -15,7 +15,7 @@
         android:padding="8dp">
 
         <ImageView
-            android:id="@+id/posterFilmIV"
+            android:id="@+id/tvMovieImage"
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:scaleType="centerCrop"
@@ -23,7 +23,7 @@
             />
 
         <TextView
-            android:id="@+id/movieNameTV"
+            android:id="@+id/tvMovieName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="#FFFFFF"
@@ -34,7 +34,7 @@
             android:paddingTop="4dp"/>
 
         <TextView
-            android:id="@+id/moviePriceTV"
+            android:id="@+id/tvMoviePrice"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="#FFFFFF"

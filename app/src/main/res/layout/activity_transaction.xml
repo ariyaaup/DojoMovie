@@ -12,7 +12,7 @@
         android:id="@+id/movieName"
         android:text="Movie Name"
         android:textSize="20sp"
-        android:textColor="@color/kuning"
+        android:textColor="@color/white"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"/>
 

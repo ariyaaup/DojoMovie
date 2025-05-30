@@ -28,8 +28,9 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="20dp"
-                android:src="@drawable/dojo_movie"
-                android:layout_marginRight="50dp"/>
+                android:layout_marginEnd="50dp"
+                android:contentDescription="MovieImage"
+                tools:ignore="HardcodedText"/>
         </androidx.appcompat.widget.Toolbar>
 
         <ScrollView
@@ -49,8 +50,7 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="300dp"
-                    android:layout_marginTop="10dp"
-                    android:src="@drawable/poster_home"/>
+                    android:layout_marginTop="10dp"/>
 
                 <fragment
                     android:id="@+id/map"
@@ -81,10 +81,10 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
-        app:headerLayout="@layout/nav_header"
+        app:headerLayout="@layout/activity_nav"
         app:menu="@menu/menu"
-        android:background="#212121"
-        app:itemIconTint="@color/itemiconcolor"
-        app:itemTextColor="@color/itemiconcolor"
-        app:itemBackground="@drawable/color"/>
+        android:background="@color/black"
+        app:itemBackground="@color/black"
+        app:itemTextColor="@color/white"/>
+
 </androidx.drawerlayout.widget.DrawerLayout>
