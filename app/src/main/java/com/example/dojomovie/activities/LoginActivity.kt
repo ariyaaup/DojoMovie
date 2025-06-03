@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
-import androidx.activity.enableEdgeToEdge
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.dojomovie.helper.DatabaseHelper
 import com.example.dojomovie.model.userLog
@@ -49,6 +49,11 @@ class LoginActivity : AppCompatActivity() {
             }
         }
 
-
+        val tvRegister = findViewById<TextView>(R.id.tvRegisterHere)
+        tvRegister.setOnClickListener {
+            val intent = Intent(this, RegisterActivity::class.java)
+            startActivity(intent)
+        }
     }
+
 }

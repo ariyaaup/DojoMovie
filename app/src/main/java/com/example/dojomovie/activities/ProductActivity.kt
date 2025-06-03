@@ -18,6 +18,12 @@ class ProductActivity : AppCompatActivity() {
     private var currentQuantity = 0
     val dbHelper = DatabaseHelper(this)
 
+    private val imageResourceMap = mapOf(
+        "MV001" to R.drawable.kong_zilla,
+        "MV002" to R.drawable.final_fatalion,
+        "MV003" to R.drawable.bond_jumpshoot
+    )
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_product_details)
@@ -32,7 +38,7 @@ class ProductActivity : AppCompatActivity() {
         val minButton = findViewById<Button>(R.id.minus)
         val buyNowButton = findViewById<Button>(R.id.buyNowButton)
 
-        var movieImage = intent.getStringExtra("MovieImage")
+        var MovieImage = intent.getStringExtra("MovieImage")
         var movieName = intent.getStringExtra("MovieName")
         var moviePrice = intent.getIntExtra("MoviePrice", 0)
         var movieID = intent.getStringExtra("Movie_ID")
@@ -42,8 +48,8 @@ class ProductActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        val imageResource = resources.getIdentifier(movieImage, "drawable", packageName)
-        poster.setImageResource(imageResource)
+        val imageResId = imageResourceMap[movieID] ?: R.drawable.ic_launcher_background
+        poster.setImageResource(imageResId)
         judul.text = movieName
         harga.text = "Price : Rp ${moviePrice}"
 

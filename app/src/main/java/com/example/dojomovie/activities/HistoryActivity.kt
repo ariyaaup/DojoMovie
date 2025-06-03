@@ -11,8 +11,8 @@ import androidx.appcompat.widget.Toolbar
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.dojomovie.helper.DatabaseHelper
 import com.example.dojomovie.adapter.transactionAdapter
+import com.example.dojomovie.helper.DatabaseHelper
 import com.example.dojomovie.model.transaction
 import com.example.dojomovie.model.userLog
 import com.google.android.material.navigation.NavigationView
@@ -21,7 +21,7 @@ import com.google.android.material.navigation.NavigationView
 class HistoryActivity : AppCompatActivity() {
 
     private lateinit var dbHelper: DatabaseHelper
-    private lateinit var transactionAdapter: transactionAdapter
+    private lateinit var transaction_Adapter: transactionAdapter
     lateinit var toggle : ActionBarDrawerToggle
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -54,27 +54,25 @@ class HistoryActivity : AppCompatActivity() {
                 }
 
                 R.id.nav_history -> {
-                    startActivity(Intent(this, HistoryActivity::class.java))
-                    Toast.makeText(applicationContext, "Clicked History", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(applicationContext, "Already in History", Toast.LENGTH_SHORT)
+                        .show()
                 }
 
-                R.id.nav_aboutUs -> Toast.makeText(applicationContext, "Clicked About Us", Toast.LENGTH_SHORT).show()
             }
 
             true
         }
 
 
-        // Initialize the database helper
         dbHelper = DatabaseHelper(this)
 
 
         val transactionHistory: ArrayList<transaction> = ArrayList(dbHelper.getTransactionHistory
             (userLog.currentLoggedInUser?.id.toString()))
 
-        transactionAdapter = transactionAdapter(transactionHistory)
+        transaction_Adapter = transactionAdapter(transactionHistory)
         val recyclerView: RecyclerView = findViewById(R.id.transactionRecyclerView)
         recyclerView.layoutManager = LinearLayoutManager(this)
-        recyclerView.adapter = transactionAdapter
+        recyclerView.adapter = transaction_Adapter
     }
 }

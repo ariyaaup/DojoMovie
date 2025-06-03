@@ -14,13 +14,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_marginTop="25dp"
-            android:background="#111111"
+            android:background="@color/black"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -29,13 +28,18 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="20dp"
-                android:layout_marginRight="50dp"/>
+                android:layout_marginEnd="50dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/dojo"
+                android:contentDescription="MovieImg_appbar"
+                tools:ignore="HardcodedText"/>
         </androidx.appcompat.widget.Toolbar>
 
         <androidx.recyclerview.widget.RecyclerView
             android:layout_marginTop="100dp"
             android:id="@+id/transactionRecyclerView"
             android:layout_width="match_parent"
+            android:background="@drawable/login_regist"
             android:layout_height="match_parent"
             android:scrollbars="vertical" />
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -49,5 +53,8 @@
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/activity_nav"
         app:menu="@menu/menu"
-        android:background="@color/black"/>
+        android:background="@color/black"
+        app:itemBackground="@color/black"
+        app:itemTextColor="@color/white"/>
+
 </androidx.drawerlayout.widget.DrawerLayout>

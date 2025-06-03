@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#212121"
+    android:background="@drawable/login_regist"
     android:id="@+id/drawerLayout"
     tools:context=".HomeActivity"
     tools:openDrawer="start">
@@ -19,7 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_marginTop="25dp"
-            android:background="#111111"
+            android:background="@color/black"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -45,13 +45,22 @@
             <ImageView
                 android:layout_marginTop="100dp"
                 android:id="@+id/profileImage"
+                android:src="@drawable/dojo_movie"
                 android:layout_width="200dp"
                 android:layout_height="200dp"
+                android:background="@drawable/img_rounded"
                 android:layout_gravity="center_horizontal"
                 android:visibility="visible"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/toolbar"/>
+            <ImageView
+                android:layout_width="220dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="50dp"
+                android:src="@drawable/dojo"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"/>
 
             <TextView
                 android:layout_marginTop="30dp"
@@ -70,15 +79,16 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="50dp"
-                android:backgroundTint="@color/black"
+                android:backgroundTint="@color/purple"
                 android:gravity="center"
                 android:text="Log Out"
                 android:textSize="20dp"
-                app:strokeColor="#EE2C2C"
+                app:strokeColor="@color/black"
                 app:strokeWidth="3px" />
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <!-- Navigation View -->
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"
         android:layout_width="200dp"
@@ -87,8 +97,7 @@
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/activity_nav"
         app:menu="@menu/menu"
-        android:background="#212121"/>
-      <!--  app:itemIconTint="@color/itemiconcolor"
-        app:itemTextColor="@color/itemiconcolor"
-        app:itemBackground="@drawable/color"/>-->
+        android:background="@color/black"
+        app:itemBackground="@color/black"
+        app:itemTextColor="@color/white"/>
 </androidx.drawerlayout.widget.DrawerLayout>

@@ -73,7 +73,6 @@ class MovieAdapter(private var movieList: ArrayList<Movie>) : RecyclerView.Adapt
 package com.example.dojomovie.adapter
 
 import android.content.Intent
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -92,7 +91,7 @@ class MovieAdapter(private var movieList: ArrayList<Movie>) : RecyclerView.Adapt
         val moviePrice: TextView = itemView.findViewById(R.id.tvMoviePrice)
     }
 
-    private val imageResourceMap = mapOf(
+     val imageResourceMap = mapOf(
         "MV001" to R.drawable.kong_zilla,
         "MV002" to R.drawable.final_fatalion,
         "MV003" to R.drawable.bond_jumpshoot
@@ -131,8 +130,8 @@ class MovieAdapter(private var movieList: ArrayList<Movie>) : RecyclerView.Adapt
         }
     }
 
-    fun updateMovieList(newMovieList: ArrayList<Movie>) {
+ /*   fun updateMovieList(newMovieList: ArrayList<Movie>) {
         this.movieList = newMovieList
         notifyDataSetChanged()
-    }
+    }*/
 }

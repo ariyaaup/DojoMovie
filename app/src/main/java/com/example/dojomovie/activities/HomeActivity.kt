@@ -6,6 +6,7 @@ import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
 import android.view.MenuItem
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
@@ -17,8 +18,8 @@ import com.android.volley.Request
 import com.android.volley.RequestQueue
 import com.android.volley.toolbox.JsonArrayRequest
 import com.android.volley.toolbox.Volley
-import com.example.dojomovie.helper.DatabaseHelper
 import com.example.dojomovie.adapter.MovieAdapter
+import com.example.dojomovie.helper.DatabaseHelper
 import com.example.dojomovie.model.Movie
 import com.google.android.material.navigation.NavigationView
 import org.json.JSONArray
@@ -28,6 +29,7 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     lateinit var toggle : ActionBarDrawerToggle
     private lateinit var requestQueue: RequestQueue
+    private lateinit var locationTextView: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -51,6 +53,14 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 R.id.nav_history -> startActivity(Intent(this, HistoryActivity::class.java))
             }
             true
+        }
+
+        locationTextView = findViewById(R.id.location_text)
+
+        locationTextView.setOnClickListener {
+   
+            val intent = Intent(this, MapActivity::class.java)
+            startActivity(intent)
         }
 
         val recyclerView: RecyclerView = findViewById(R.id.RVHomePage)

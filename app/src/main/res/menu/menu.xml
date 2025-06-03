@@ -9,13 +9,9 @@
     <item
         android:id="@+id/nav_person"
         android:title="Profile"
-        android:iconTint="@color/black"/>
+        android:iconTint="@color/white"/>
     <item
         android:id="@+id/nav_history"
         android:title="History"
-        android:iconTint="@color/black"/>
-    <item
-        android:id="@+id/nav_aboutUs"
-        android:title="About Us"
-        android:iconTint="@color/black"/>
+        android:iconTint="@color/white"/>
 </menu>

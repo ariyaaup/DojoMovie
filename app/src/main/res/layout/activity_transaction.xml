@@ -1,18 +1,17 @@
-<!-- res/layout/transaction_item.xml -->
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:padding="16dp"
-    android:background="#262626"
+    android:background="@color/black"
     android:layout_marginBottom="10dp"
     >
     <TextView
         android:id="@+id/movieName"
         android:text="Movie Name"
         android:textSize="20sp"
-        android:textColor="@color/white"
+        android:textColor="@color/purple"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"/>
 

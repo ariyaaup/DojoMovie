@@ -2,7 +2,6 @@ package com.example.dojomovie
 
 import android.annotation.SuppressLint
 import android.content.Intent
-import android.content.pm.PackageManager
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.telephony.SmsManager
@@ -124,7 +123,7 @@ class OTPActivity : AppCompatActivity() {
         val timer = object : CountDownTimer(30000, 1000) {
             override fun onTick(millisUntilFinished: Long) {
                 val secondsLeft = millisUntilFinished / 1000
-                countdownText.text = "Resend Code In : $secondsLeft s asda"
+                countdownText.text = "Resend Code In : $secondsLeft s"
             }
 
             override fun onFinish() {

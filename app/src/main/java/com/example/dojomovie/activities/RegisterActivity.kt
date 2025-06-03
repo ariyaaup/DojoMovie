@@ -7,6 +7,7 @@ import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import com.example.dojomovie.helper.DatabaseHelper
@@ -42,6 +43,12 @@ class RegisterActivity : AppCompatActivity() {
         }
 
         logExistingUsers()
+
+        val tvLoginPage = findViewById<TextView>(R.id.tvLoginLah)
+        tvLoginPage.setOnClickListener {
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun validateInput(phoneNumber: String, password: String, confirmPassword: String): Boolean {

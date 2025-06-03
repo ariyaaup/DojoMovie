@@ -12,10 +12,8 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.drawerlayout.widget.DrawerLayout
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.example.dojomovie.helper.DatabaseHelper
 import com.example.dojomovie.adapter.transactionAdapter
+import com.example.dojomovie.helper.DatabaseHelper
 import com.example.dojomovie.model.userLog
 import com.google.android.material.navigation.NavigationView
 
@@ -64,8 +62,6 @@ class ProfileActivity : AppCompatActivity() {
                     startActivity(Intent(this, HistoryActivity::class.java))
                     Toast.makeText(applicationContext, "Clicked History", Toast.LENGTH_SHORT).show()
                 }
-
-                R.id.nav_aboutUs -> Toast.makeText(applicationContext, "Clicked About Us", Toast.LENGTH_SHORT).show()
             }
 
             true
