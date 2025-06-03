@@ -84,10 +84,10 @@
                     android:layout_marginBottom="20dp"/>
 
                 <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/RVHomePage"
                     android:layout_width="match_parent"
                     android:layout_height="700dp"
-                    android:id="@+id/RVHomePage"
-                    tools:ignore="MissingConstraints"/>
+                    tools:ignore="MissingConstraints" />
 
             </LinearLayout>
         </ScrollView>
