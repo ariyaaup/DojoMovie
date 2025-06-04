@@ -38,7 +38,6 @@ class ProductActivity : AppCompatActivity() {
         val minButton = findViewById<Button>(R.id.minus)
         val buyNowButton = findViewById<Button>(R.id.buyNowButton)
 
-        var MovieImage = intent.getStringExtra("MovieImage")
         var movieName = intent.getStringExtra("MovieName")
         var moviePrice = intent.getIntExtra("MoviePrice", 0)
         var movieID = intent.getStringExtra("Movie_ID")
@@ -76,7 +75,8 @@ class ProductActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            val transaction = transaction(0, movieID.toString(), loggedInUser.id.toString(), quantity)
+            val transaction = transaction(0, movieID.toString(), loggedInUser.id.toString(),
+                quantity)
             dbHelper.insertTransaction(transaction)
 
             if (quantity > 0) {

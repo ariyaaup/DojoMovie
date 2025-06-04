@@ -251,7 +251,6 @@ class DatabaseHelper(context: Context): SQLiteOpenHelper(context, "user.db", nul
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
         db?.execSQL("DROP TABLE IF EXISTS Users")
         db?.execSQL("DROP TABLE IF EXISTS Movies")
-        db?.execSQL("DROP TABLE IF EXISTS Transactions")
         onCreate(db)
     }
 

@@ -33,16 +33,19 @@
                 android:src="@drawable/dojo"
                 android:contentDescription="MovieImg_appbar"
                 tools:ignore="HardcodedText"/>
+
         </androidx.appcompat.widget.Toolbar>
 
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/RVTransaction"
             android:layout_marginTop="100dp"
-            android:id="@+id/transactionRecyclerView"
             android:layout_width="match_parent"
             android:background="@drawable/login_regist"
             android:layout_height="match_parent"
+            tools:ignore="MissingConstraints"
             android:scrollbars="vertical" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     <!-- Navigation View -->
     <com.google.android.material.navigation.NavigationView

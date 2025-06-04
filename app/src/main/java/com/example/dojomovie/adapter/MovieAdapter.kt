@@ -130,7 +130,7 @@ class MovieAdapter(private var movieList: ArrayList<Movie>) : RecyclerView.Adapt
         }
     }
 
- /*   fun updateMovieList(newMovieList: ArrayList<Movie>) {
+/*    fun updateMovieList(newMovieList: ArrayList<Movie>) {
         this.movieList = newMovieList
         notifyDataSetChanged()
     }*/

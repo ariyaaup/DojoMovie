@@ -12,7 +12,7 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.drawerlayout.widget.DrawerLayout
-import com.example.dojomovie.adapter.transactionAdapter
+import com.example.dojomovie.adapter.TransactionAdapter
 import com.example.dojomovie.helper.DatabaseHelper
 import com.example.dojomovie.model.userLog
 import com.google.android.material.navigation.NavigationView
@@ -21,7 +21,7 @@ import com.google.android.material.navigation.NavigationView
 class ProfileActivity : AppCompatActivity() {
 
     private lateinit var dbHelper: DatabaseHelper
-    private lateinit var transactionAdapter: transactionAdapter
+    private lateinit var transactionAdapter: TransactionAdapter
     lateinit var toggle : ActionBarDrawerToggle
 
     @SuppressLint("MissingInflatedId")
